@@ -3,11 +3,13 @@ package stomas.andres.agenda;
 public class Fecha {
     private int dia;
     private int mes;
+    private int año;
 
     public Fecha(){}
-    public Fecha(int dia, int mes){
+    public Fecha(int dia, int mes, int año){
         this.setDia(dia);
         this.setMes(mes);
+        this.setAño(año);
     }
 
     public void setDia(int dia){
@@ -22,7 +24,15 @@ public class Fecha {
 
     public int  getMes(){ return mes; }
 
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
+    }
+
     public String toString(){
-        return String.format("%02d",dia) + "/" + String.format("%02d" ,mes);
+        return String.format("%02d", dia) + "/" + String.format("%02d", mes) + "/" + String.format("%02d", año);
     }
 }

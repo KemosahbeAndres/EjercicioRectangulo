@@ -12,7 +12,7 @@ public class Punto {
 	private String nombre;
 
 	public Punto(){
-		this(random.nextDouble()*max, random.nextDouble()*max);
+		this("Punto");
 	}
 	public Punto(double x, double y){
 		this("Punto", x, y);
@@ -22,8 +22,8 @@ public class Punto {
 	}
 	public Punto(String nombre, double x, double y){
 		this.setNombre(nombre);
-		this.setX(random.nextBoolean() ? -x : x);
-		this.setY(random.nextBoolean() ? -y : y);
+		this.setX(x);
+		this.setY(y);
 	}
 
 	public void setNombre(String nombre){
@@ -57,7 +57,6 @@ public class Punto {
 		double B = Math.pow(punto.getY()-this.y, 2);
 		return Math.sqrt(A+B);
 	}
-
 	public String toString(){
 		return nombre + "(X: "+ String.format("%.2f",x) + ", Y: " + String.format("%.2f", y) + ")";
 	}
