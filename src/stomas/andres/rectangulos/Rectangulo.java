@@ -1,3 +1,5 @@
+package stomas.andres.rectangulos;
+
 public class Rectangulo
 {
 	private double longitud;
@@ -35,6 +37,6 @@ public class Rectangulo
 	}
 	public String toString()
 	{
-		return String.valueOf();
+		return "Longitud: "+longitud+" | Ancho: "+ ancho;
 	}
 }
